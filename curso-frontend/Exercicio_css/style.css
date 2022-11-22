@@ -17,13 +17,15 @@ body > header a{
     color: white;
     list-style: none;
     text-decoration: none;
-    padding-right: 10px;
-    
+    padding-right: 10px; 
+}
+body > header h1{
+    padding-left: 20px;
 }
 body > header li{
     display: inline;
 }
-/* section */
+/* sections de conteudo */
 #sports{
     background-color: rgba(0, 255, 0, 0.1);
 }
@@ -47,6 +49,10 @@ body > header li{
 }
 #entertainment article a{
     background-color: #bd3cce;
+}
+/* section geral */
+section{
+    padding: 10px;
 }
 section h2{
     padding: 16px;
