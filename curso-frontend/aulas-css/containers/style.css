@@ -36,6 +36,18 @@ body > header li{
 #economy article a{
     background-color: #ff9f1a;
 }
+#tecnology{
+    background-color:#7ff4ff5d ;
+}
+#tecnology article a{
+    background-color: #0000ff;
+}
+#entertainment{
+    background-color:#ff9ceb7a ;
+}
+#entertainment article a{
+    background-color: #bd3cce;
+}
 section h2{
     padding: 16px;
     font-weight: bold;
