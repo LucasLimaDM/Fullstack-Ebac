@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* container */
+.container{
+    max-width: 1280px;
+    width:100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin: 0 auto;
+}
+header .container{
+    justify-content: space-between;
+    font-weight: normal;
+}
+body > .container {
+    font-family: Roboto;
+    justify-content: center;
+}
+
+/* cabeçalho */
+header{
+    
+    padding: 16px;
+    background-color: #182c61;
+    color: #ecf0f1;
+    font-family: Bungee;
+}
+header nav a{
+    color: #ecf0f1;
+    text-decoration: none;
+}
+header nav li,
+#quemsomos li{
+    display: inline;
+    padding-left: 16px;
+    font-size: 18px;
+}
+
+/* quem somos */
+#quemsomos{
+    
+    max-width: 300px;  
+    margin: 24px 8px 0px 8px; 
+}
+#quemsomos h2{
+    font-family: Bungee;
+}
+#quemsomos img{
+    height: 24px;
+    margin-top: 8px;
+}
+#imgprincipal{
+    width: 90vw;
+    max-width: 550px;
+    margin: 24px 8px 0px 8px;
+}
+
+
+
