@@ -12,14 +12,25 @@
     <div class="container">
         <h1>EBAC Banking</h1>
         <h2>Depósitos</h2>
+
         <form id="form-deposito">
+            <p class="name-message"> O nome precisa ser completo</p>
             <input id="nomeBeneficiario" type="text" required placeholder="Nome completo do beneficiário" />
-            <input id="numeroContaBeneficiario" type="number" required placeholder="Número da conta" />
-            <input id="valorDeposito" type="number" required placeholder="Valor" />
+
+            <p class="account-message">A conta deve ter no mínimo 6 dígitos</p>
+            <input id="contaBeneficiario" type="number" required placeholder="Número da conta" />
+
+            <p class="value-message">Insira um valor para o depósito</p>
+            <input id="valorDeposito" type="number" step=".01" required placeholder="Valor" />
+
             <textarea id="descricaoDeposito" placeholder="Descrição (opcional)"></textarea>
+
             <button id="button" type="submit">Depositar</button>
+
         </form>
+
+        <p class="resposta-deposito"></p>
     </div>
     <script src="main.js"></script>
 </body>
-</html> 
+</html>

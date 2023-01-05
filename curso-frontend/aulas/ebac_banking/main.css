@@ -36,3 +36,19 @@ button {
 button:hover {
     background-color: #27ae60;
 }
+.name-message, .value-message, .account-message{
+    display: none;
+}
+
+input.error{
+    outline: #6d0000;
+    color: #b40000;
+}
+p.error{
+    color: #fff;
+    font-size: 0.9em;
+    background-color: red;
+    padding: 3px;
+    display: block;
+}
+
