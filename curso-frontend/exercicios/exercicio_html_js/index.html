@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Comparador de valores</title>
+</head>
+<body>
+    <h1>Comparador de Valores</h1>
+    <p>Software desenvolvido para a comparação de valores por meio de código Javascript</p>
+    <div class="container">
+
+        <form class="box-comparador">
+            <h2>Comparador de maior valor</h2>
+            <div class="box-valor1">
+                <label for="valor1">Insira o primeiro valor</label> <br>
+                <input type="number" name="valor1" id="valor1" required max="100000000000000000">
+            </div>
+
+            <div class="box-input2">
+                <label for="valor2">Insira o segundo valor</label> <br>
+                <input type="number" name="valor2" id="valor2" required>
+            </div>
+            <p class="resposta-maior-valor"></p>
+            <input type="submit" value="COMPARAR" max="100000000000000000">
+        </form>
+        
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
