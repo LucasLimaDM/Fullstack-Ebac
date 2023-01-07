@@ -64,4 +64,22 @@ input[type="number"]:focus{
 }
 .resposta-maior-valor {
     display: none;
+    
+    padding: 10px;
+}
+p.valid{
+    border: 3px solid darkgreen;
+    color: green;
+    display: block;
+}
+p.invalid{
+    border: 3px solid darkred;
+    color: red;
+    display: block;
+}
+input.valid{
+    color: green;
+}
+input[type=number]::-webkit-inner-spin-button{
+        display: none;
 }
