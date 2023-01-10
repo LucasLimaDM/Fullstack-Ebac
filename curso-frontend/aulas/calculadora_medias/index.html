@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/logo.png" type="png">
+    <title>Calculadora de médias</title>
+</head>
+<body>
+    <div class="container">
+    
+
+            <header>
+                <img src="images/logo.png" alt="logo calculadora">    
+                <h1>Calculadora de médias</h1>
+                
+            </header>
+    
+            <form class="form-atividade">    
+                <input type="text" name="nome-ativ" id="nome-ativ" required placeholder="Nome da atividade" maxlength="50">
+                <input type="number" name="nota-ativ" id="nota-ativ" required placeholder="Nota da atividade" min="0" max="10">
+                <input type="submit" value="Adicionar+" >
+            </form>
+    
+            <table>
+    
+                <thead>
+                    <tr>
+                        <th>Nome da atividade</th>
+                        <th>Nota da atividade</th>
+                        <th>Aprovado?</th>
+                    </tr>
+                </thead>
+    
+    
+                <tbody>
+                </tbody>
+    
+                <tfoot>    
+                </tfoot>
+    
+            </table>
+    
+        
+        
+    </div>
+    
+<script src="main.js"></script>
+
+
+
+</body>
+</html>
