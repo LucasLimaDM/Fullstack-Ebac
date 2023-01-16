@@ -24,7 +24,14 @@
 
 'método coringa splice'
 
+// [array].splice(posição, quantidade de valores selecionados, valor a ser colocado no local da remoção)
 
+//remover valor do meio
+[1, 2, 3].splice(2, 1)
+
+// troca o valor da posição selecionada pelo valor selecionado
+
+[1, 2, 3].splice(2, 1, 'abobora')
 
     'Métodos de busca'
 
