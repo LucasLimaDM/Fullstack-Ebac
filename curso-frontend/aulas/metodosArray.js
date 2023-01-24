@@ -27,7 +27,7 @@
 // [array].splice(posição, quantidade de valores selecionados, valor a ser colocado no local da remoção)
 
 //remover valor do meio
-[1, 2, 3].splice(2, 1)
+[1,2,3,'a'].splice(2, 1)
 
 // troca o valor da posição selecionada pelo valor selecionado
 
@@ -37,11 +37,27 @@
 
 [1,2,3].indexOf(3) // 2; retorna a posição do valor selecionado
 
+[1,2,3,4,5].find(n => n > 4) // 5; busca algum valor que cumpra o requisito e retorna o primeiro que cumprir
 
+[1,2,3,4,5].findLast((n => n > 2))// 5; busca o ultimo valor que cumpra o requisito
+
+[1,2,3,4,5].findIndex(n => n > 4)// 4; mesmo funcionamento de find, mas retorna a posição do valor encontrado
+
+[1,2,3,4,5].findLastIndex((n => n > 2))// 4; mesmo funcionamento de findLast mas retorna a posiçãodo valor
+
+[1,2,3,4,5].at(-2)// 4; retorna o valor da posição indicada
+
+[1,2,3,4,5].filter(n => n%2 == 0)// [2,4,6,8]; retorna um array com todos os valores que passarem no filtro
+
+[1,2,3,4].some()
 
 [1,2,3].includes(2) // true; retorna true se o array possui o valor selecionado
 
+'métodos de modificação do array'
 
+[1,2,3,4,5].map(n => n*2)// [2,4,6,8,10]; aplica uma propriedade a todos os valores do array
+
+// A minha tarefa do módulo 7 não está marcada como concluída, a pesar de já ter sido corrigida pelo professor, segue o print
 
 
 
