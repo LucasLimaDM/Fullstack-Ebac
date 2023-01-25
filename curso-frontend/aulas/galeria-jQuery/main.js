@@ -1,4 +1,4 @@
-$(document).ready(function() {
+
     
     $('header button').click(function() {
 
@@ -11,6 +11,7 @@ $(document).ready(function() {
         
     })
 
+    $('header').
 
 
 
@@ -23,5 +24,3 @@ $(document).ready(function() {
 
 
 
-
-})
