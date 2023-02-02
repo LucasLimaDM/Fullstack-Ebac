@@ -15,7 +15,7 @@ header{
     align-items: center;
     justify-content: space-around;
 }
-.container, form{
+.new-image-area, form{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,9 +31,10 @@ button{
     border: none;
     cursor: pointer;
 }
-.container{
+.new-image-area{
     background-color: #b9f6ff;
     padding: 32px;
+    display: none;
 }
 form{
     flex-flow: column nowrap;
@@ -41,6 +42,7 @@ form{
     background-color: #f6f6f7;
     padding: 25px 15px 40px 15px;
     border-radius: 8px;
+    max-width: 500px;
 }
 input[type="url"]{
     width: 185px;
@@ -82,4 +84,38 @@ header button:hover, #b-submit:hover{
     transition: 0.2s;
     transform: translateY(2px)
 }
-
+ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+ul li{
+    width: 25%;
+    position: relative;
+    max-height: 230px;
+    overflow-y: hidden;
+    aspect-ratio: 7 / 4;
+}
+ul img{
+    width: 100%;
+    aspect-ratio: 7 / 4;
+}
+li div{
+    padding: 12px;
+    background-color: black;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: 0.4s;
+}
+li:hover div{
+    opacity: 1;
+    transition:0.4s;
+}
+a{
+    font-size: 0.8em;
+    color: #fff;
+    text-decoration: none;
+}
