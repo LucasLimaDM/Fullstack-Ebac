@@ -14,5 +14,6 @@ $(novoItem).hide()
 $(novoItem).fadeIn()
 //Dá transição para um item aparecer
 
-
-
+$('header button').on('click', function() {
+})
+//Simula o addEventListener
