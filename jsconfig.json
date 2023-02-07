@@ -1,3 +1,4 @@
+// adiciona o autocomplete para jQuery
 {
     "typeAcquisition": {
         "include": [
