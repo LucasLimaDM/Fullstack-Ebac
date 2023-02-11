@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+    outline: 1px solid lime;
+}
+.flex{
+    display: flex;
+    gap: 15px;
+}
+.row{
+    flex-direction: row;
+}
+.column{
+    flex-direction: column;
+}
+.far-center{
+    justify-content: space-between;
+    align-items: center;
+}
+.separed{
+    justify-content: space-around;
+}
+header{
+    background-color: #192a56;
+    color: #fafaf4;
+    height: 80px;
+}
+a{
+    color: #fafaf4;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    width: 100%;
+}
+nav{
+    width: 60%;
+}
+/** media queries para quebrar o header */
