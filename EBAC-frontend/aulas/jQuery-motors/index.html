@@ -7,20 +7,28 @@
     <meta name="description" content="Carros a venda baratos e  bonitos, lindos, a preços acessíveis.">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
-    <title>jQuery Motors</title>
+    <title>jQuery Motors</title> 
 </head>
 <body>
-    <header class="flex row far-center">
+    <header class="flex row separed">
         <h1>EBAC Motors</h1>
-        <nav class="flex">
-            <ul class="flex row separed">
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Em Destaque</a></li>
-                <li><a href="#">Promoções</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
+        <nav class="flex" id="top-links">
+            <div id="links" class="flex separed">
+                <button>Sobre</button>
+                <button>Destaque</button>
+                <button>Promoções</button>
+                <button>Contato</button>
+            </div>
         </nav>
+        <div id="menu-hamburguer" class="flex column separed">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
+    <nav id="sidebar">
+
+    </nav>
     
 
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
