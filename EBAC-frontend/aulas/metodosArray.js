@@ -63,7 +63,14 @@
 
 
 
+// mascara telefone
+const telefone = document.querySelector('#telefone');
 
+telefone.addEventListener('keyup', function () { 
+    telefone.value = telefone.value.replace(/\D/g,"");
+    telefone.value = telefone.value.replace(/^(\d{2})(\d)/g,"($1) $2")
+    telefone.value = telefone.value.replace(/(\d)(\d{4})$/,"$1-$2")
+})
 
 
 

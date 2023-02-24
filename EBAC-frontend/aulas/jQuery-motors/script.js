@@ -10,23 +10,12 @@ sidebar.innerHTML = topLinks.innerHTML
 
 function alteraMenu(estado) {
     if (estado == 'aberto') {
-        sidebar.style.transform = 'translateX(200px)'
+        sidebar.style.transform = 'translateX(0px)'
+        hamburguer.classList.remove('X')
     }
     if (estado == 'fechado') {
         sidebar.style.transform = 'translateX(-200px)'
-    }
-}
-
-function desenhaMenu(desenho) {
-    if (desenho == 'X') {
-        hamburguer.style.gap = '0px'
-        span[0].style.transform = 'rotate(45deg)'
-        span[1].style.display = 'none'
-        span[2].style.transform = 'rotate(-45deg)'
-
-    }
-    if(desenho == 'E') {
-
+        hamburguer.classList.add('X')
     }
 }
 
@@ -35,10 +24,8 @@ function desenhaMenu(desenho) {
 $('#menu-hamburguer').on('click', function() {
     if(sidebar.style.transform == 'translateX(-200px)'){
         alteraMenu('aberto')
-        desenhaMenu('E')
     } else {
         alteraMenu('fechado')
-        desenhaMenu('X')
     }
 })
 
@@ -46,13 +33,18 @@ $('#menu-hamburguer').on('click', function() {
 document.body.onresize = function(){
     if(sidebar.style.transform == 'translateX(-200px)'){
         console.log('ativou diminui')
-        retiraMenu()}   
+        alteraMenu('aberto')
+}
 }
 
+const telefone = document.querySelector('#telefone');
 
+// telefone.addEventListener('keyup', function () { 
+//     telefone.value = telefone.value.replace(/\D/g,"");
+//     telefone.value = telefone.value.replace(/^(\d{2})(\d)/g,"($1) $2")
+//     telefone.value = telefone.value.replace(/(\d)(\d{4})$/,"$1-$2")
+// })
 
-
-// chega na medida, cria o sidebar invisivel, ele recebe a ul, depois jquery puxa pro lado
-
-
-
+$(document).ready(function () {  
+    $('#telefone').mask('(00) 00000-0000')
+})
