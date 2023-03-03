@@ -2,11 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Commissioner, sans-serif;
+    font-family: Comissioner, sans-serif;
     color: #141414;
     border: none;
-    
 }
+@font-face {
+    font-family: Cormorand;
+    src: url(fonts/Cormorant_Garamond-Roboto/Cormorant_Garamond/CormorantGaramond-Medium.ttf);
+}
+/* fonts/Cormorant_Garamond-Roboto/Roboto-medium.ttf */
 .flex{
     display: flex;
 }
@@ -32,10 +36,12 @@ form{
     margin-top: 10px;
 }
 input[type=text], input[type=tel], input[type=email], input[type=number]{
-    width: 200px;
-    height: 28px;
-    border-radius: 1px;
-    background-color: #f0f6f7;
+    width: 180px;
+    height: 34px;
+    border-radius: 6px;
+    background-color: #fefefe;
+    border: 2px solid rgb(68, 68, 68);
+    box-shadow: 2px 2px 15px 1px #1414141e;
     padding: 3px;
 }
 input[type=number]::-webkit-inner-spin-button{
