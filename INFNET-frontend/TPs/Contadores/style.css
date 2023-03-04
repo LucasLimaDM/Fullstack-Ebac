@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Calibri, 'Trebuchet MS', sans-serif;
+} 
+main{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 350px;
+} 
+p{
+  font-size: 1.3em;
+} 
+#result{
+  font-size: 2.8em;
+} 
+.container-buttons{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-flow: row wrap;
+  width: 260px;
+}
+button{
+  height: 40px;
+  width: 120px;
+  color: white;
+  border: none;
+  font-size: 1.5em;
+  font-weight: bolder;
+} 
+button[value="+"]{ 
+  background-color: blue;
+}
+button[value="-"]{ 
+  background-color: red;
+}
+input[type="number"]{
+  height: 40px;
+  width: 260px;
+  padding: 0 20px;
+}
