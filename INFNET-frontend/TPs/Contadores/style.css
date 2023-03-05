@@ -31,12 +31,16 @@ button{
   border: none;
   font-size: 1.5em;
   font-weight: bolder;
+  cursor: pointer;
 } 
 button[value="+"]{ 
-  background-color: blue;
+  background-color: rgb(22, 210, 22);
 }
 button[value="-"]{ 
-  background-color: red;
+  background-color: blue;
+}
+button[value="clean"]{
+  background-color: rgb(245, 218, 17);
 }
 input[type="number"]{
   height: 40px;
