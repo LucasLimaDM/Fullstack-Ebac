@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    color:#404040;
+    outline: 1px solid lime;
+}
+ul{
+    list-style: none;
+}
+button{
+    border: none;
+    cursor: pointer;
+}
+/* flex */
+.container, .menu, header, header nav{
+    display: flex;
+}
+/* alinhamento ao centro espaçado */
+.container{
+    align-items: center;
+    justify-content: space-between;
+}
+body{
+    background-color: #fafafa;
+}
+header{
+    background-color: #fdfdfd;
+    border-bottom: 1px solid #cccccc;
+    flex-flow: column nowrap;
+    height: 100px;
+    justify-content: space-between;
+}
+header > div.container{
+    width: 100%;
+    padding: 10px;
+}
+.search-form{
+    width: 190px;
+    background-color: inherit;
+}
+.search-form button{
+    width: 20px;
+    height: 20px;
+    background-color: inherit;
+}
+ion-icon[name="search"]{
+    color: #4f4f4f;
+    font-size: 20px;
+}
+.search{
+    border: none;
+    border-bottom: 1px solid #5e5e5e;
+    height: 20px;
+    background-color: inherit;
+}
+input:focus{
+    outline: none;
+}
+header nav{
+    height: 33px;
+
+}
+.menu > li{
+    width: 150px;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.menu >li span{
+    display: block;
+    text-align: center;
+}
+.menu span{
+    height: 25px;
+    box-sizing: content-box;
+}
+.menu > li:hover span{
+    border-top: 2px solid red;
+}
+.menu > li:hover .submenu{
+    height: 50px;
+}
+.submenu{
+    transition: .3s;
+    background-color: #fdfdfd;
+    height: 0;
+    overflow-y: hidden;
+    transform-origin: top;
+}
+.submenu li{
+    padding-left: 15px;
+
+}
