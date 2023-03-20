@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+
+        <title>Exercise 7.05</title>
+
+        <style> canvas { border: 1px solid gray; } </style>
+
+    </head>
+
+    <body>
+
+        <canvas width="320" height="240" id="canvasArea"></canvas>
+
+        <script>
+
+            function drawFrame(context) {
+
+                context.clearRect(0, 0, canvasElement.width, canvasElement.height);
+
+                drawSky(context);
+                drawIgloo(context);
+            }
+
+            const canvasElement = document.getElementById ('canvasArea');
+
+            if (canvasElement.getContext) {
+
+                const context = canvasElement.getContext('2d');
+
+                drawFrame(context);
+
+            }
+
+            function drawSky(context) {
+
+            context.fillStyle = "#030339";
+
+            context.fillRect(0, 0, canvasElement.width, canvasElement.height);
+
+            }
+
+            function drawIgloo(context) {
+                context.fillStyle = 'white';
+                context.arc(120, 160, 60, 0, Math.PI *2, false);
+                context.fill();
+            }
+
+
+
+        </script>
+
+    </body>
+
+</html>

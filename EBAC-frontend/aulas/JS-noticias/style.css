@@ -3,8 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
-    color:#404040;
-    outline: 1px solid lime;
+    /* outline: 1px solid lime; */
 }
 ul{
     list-style: none;
@@ -13,8 +12,12 @@ button{
     border: none;
     cursor: pointer;
 }
+a{
+    text-decoration: none;
+}
+
 /* flex */
-.container, .menu, header, header nav{
+.container, header, .menu, .topic-title, .submenu, .news{
     display: flex;
 }
 /* alinhamento ao centro espaçado */
@@ -24,13 +27,19 @@ button{
 }
 body{
     background-color: #fafafa;
+    color:#404040;
 }
+/* cabeçalho */
 header{
     background-color: #fdfdfd;
     border-bottom: 1px solid #cccccc;
     flex-flow: column nowrap;
     height: 100px;
     justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    color:#404040;
 }
 header > div.container{
     width: 100%;
@@ -58,37 +67,139 @@ ion-icon[name="search"]{
 input:focus{
     outline: none;
 }
-header nav{
-    height: 33px;
-
+.menu{
+    height: 40px;
 }
-.menu > li{
-    width: 150px;
-    flex-direction: column;
-    align-items: flex-end;
-}
-.menu >li span{
-    display: block;
+.topic{
+    width: 120px;
     text-align: center;
+    flex-direction: column;
 }
-.menu span{
-    height: 25px;
-    box-sizing: content-box;
-}
-.menu > li:hover span{
-    border-top: 2px solid red;
-}
-.menu > li:hover .submenu{
-    height: 50px;
+.topic-title.container{
+    height: 40px;
+    justify-content: center;
+    
 }
 .submenu{
-    transition: .3s;
-    background-color: #fdfdfd;
     height: 0;
+    transition: height .5s;
     overflow-y: hidden;
-    transform-origin: top;
+    text-align: left;
+    width: 120px;
+    flex-flow: column nowrap;
+    background-color: #fdfdfd;
+    padding-left: 10px;
+    position: fixed;
+    top: 100px;
 }
 .submenu li{
-    padding-left: 15px;
+    padding: 5px;
+}
+.topic::before{
+    content: "";
+    display: block;
+    width: 120px;
+    height: 3px;
+    position: fixed;
+    top: 59px;
+    transition: background-color .3s;
+}
+.topic:hover::before{
+    background-color: red;
+}
 
+.topic:hover .submenu{
+    height: 140px;
+}
+
+/* conteudo */
+.principal{
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    max-width: 1900px;
+    margin: auto;
+    height: calc(100vh);
+}
+
+section .news-item{
+    width: 400px;
+    height: 300px;
+    overflow-y: hidden;
+}
+aside .news-item{
+    width: 190px;
+}
+section h2{
+    padding: 15px 10%;
+}
+aside h2{
+    padding: 15px 10%;
+}
+aside{
+    border-left: 1px solid #ddd;
+    background-color: #f8f8f8;
+    height: fit-content;
+}
+.news{
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 24px;
+}
+/* section destaques */
+.destaques .news-item, .destaques .news-item img{
+    width: 450px;
+}
+/* carrossel */
+.carousel{
+    width: 500px;
+}
+/* largura dos itens dentro do carrossel */
+.carousel .news-item, .carousel .news-item img, .carousel .news-text{
+    width: 500px;
+}
+.carousel .news-text{
+    position: absolute;
+    bottom: 25px;
+    padding-left: 10px;
+    font-size: 1.2em;
+}
+/* imagens com texto por cima */
+.img-back img{
+    filter: brightness(0.7);
+    height: 100%;
+}
+.img-back, .img-back a, .img-back a:visited{
+    color: #fdfdfd;
+}
+/* carrossel slick */
+.slick-arrow:before{
+    color: black;
+}
+
+/* section breaking-news */
+.breaking-news{
+    width:90%;
+    margin: auto;
+}
+.breaking-news .news{
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+
+    justify-content: space-around;
+}
+.breaking-news img, .breaking-news .news-item, .breaking-news .news-text {
+    width: 250px;
+}
+
+
+@media(min-width:1100px){
+    body .principal{
+        grid-template-columns: 80% 20%;
+    }
+    main .news{
+        flex-flow: row wrap;
+        gap: 30px;
+        justify-content: space-around;
+    }
 }

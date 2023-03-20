@@ -1,51 +1,57 @@
 const keys = document.querySelectorAll('.tecla');
 const result = document.querySelector('.result');
 const allNumbers = [''];
-let lastNum;
+const operatorList = ['*', '/', '+', '-']
+
+
 
 // adiciona events a todas as teclas e as redireciona para o ativaTecla, onde cada uma irá para suas devidas funções
+
+window.addEventListener('keydown', function(e){
+    console.log(e);
+    activeKey(e.key);
+})
+
 for (const key of keys) {
     
     key.addEventListener('click', function(){
-        ativaTecla(key)
+        activeKey(key.innerText)
     })
 }
 
 // redireciona cada tecla clicada para seus devidos comportamentos, iniciando pelos números, operadores e enviando os caracteres especiais para o objeto specialKeys, que contém uma função para cada tecla especial
-function ativaTecla(key) {
+function activeKey(keyValue) {
     
-    let keyText = key.innerText;
+    if (keyValue === 'Enter') {
+        keyValue = '=';
+    }
 
-    if (!(isNaN(keyText))){
+    if (!(isNaN(keyValue))){
         
-        allNumbers[allNumbers.length -1] += keyText;
+        allNumbers[allNumbers.length -1] += keyValue;
         updateCalc();
 
         console.log("🚀 allNumbers:", allNumbers)
-    } 
-    
-    lastNum = allNumbers[allNumbers.length - 1];
-    console.log("🚀 lastNum:", lastNum)
-
-    if ( key.classList.contains('operator') && lastNum.match(/[0-9]/)) {
+    } else if ( operatorList.includes(keyValue) && allNumbers[allNumbers.length - 1].match(/[0-9]/)) {
         
-        operatorAdd(keyText)
+        operatorAdd(keyValue);
         updateCalc()
 
         console.log("🚀  allNumbers:", allNumbers)
-    } 
-    if ( key.classList.contains('special')) {
-        
-        specialKeys[key.id](lastNum)
+    } else {
+        const keySymbol = specialSwitch(keyValue);
+        console.log("🚀 keySymbol:", keySymbol)
+
+        if (keySymbol) {
+
+            specialKeys[keySymbol](allNumbers[allNumbers.length - 1])
+
+        }
         
     }
 
 }
 
-function operatorAdd(keyText) {
-    allNumbers.push(keyText);
-    allNumbers.push('')
-}
 
 // dá o comportamento específico para cada tecla especial
 const specialKeys = {
@@ -74,10 +80,36 @@ const specialKeys = {
     
 }
 
+function specialSwitch(value){
+    switch (value) {
 
+        case '.':
+            return 'dot';
+        
+        case 'X':
+            return 'delete';
+        
+        case 'C':
+            return 'clean';
 
+        case 'c':
+            return 'clean';
 
-// limpa a o
+        case '=':
+            return 'equal';
+
+        default:
+            return false;
+    }
+}
+
+function operatorAdd(keyText) {
+    allNumbers.push(keyText);
+    allNumbers.push('')
+    console.log("🚀 allNumbers:", allNumbers)
+    
+}
+
 function cleanNumbers() {
     allNumbers.splice(0, allNumbers.length);
     allNumbers.push('');
@@ -92,15 +124,20 @@ function testInt(value){
 
 
 function doAccount() {
+    if (allNumbers[allNumbers.length - 1] === '') {
+        activeKey(0);
+    }
     let realization = eval(allNumbers.join(''));
+    console.log("🚀 ~ file: script.js:116 ~ doAccount ~ realization:", realization)
 
     cleanNumbers()
-
+    
     if (!(testInt(realization))){
-
+        
         realization = realization.toFixed(2);
-    } 
 
+    } 
+    
     allNumbers.splice(allNumbers.length - 1 , 1, String(realization));
 }
 
@@ -118,7 +155,6 @@ function removeEmpty(lastNumber) {
         console.log("🚀 allNumbers:", allNumbers)
         
         lastNumber = allNumbers[allNumbers.length -1];
-        lastNum = lastNumber;
 
     }
 }
