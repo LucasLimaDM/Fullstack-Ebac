@@ -1,0 +1,62 @@
+/* #7311F5 */
+header{
+    background-color: #7511f5;
+    color: #fafafa;
+    padding: 20px;
+}
+
+section{
+    min-height: 80vh;
+}
+
+section h2{
+
+}
+
+input[type="number"]::-webkit-inner-spin-button{
+    display: none;
+}
+h3{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.cadastro > label, .form-check{
+    padding-top: 30px;
+}
+
+.buttons{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons button{
+    width: 40%;
+}
+
+#theme{
+    width: 70px;
+    height: 30px;
+}
+
+header .form-check{
+    padding: 0;
+}
+
+.theme-changer{
+    display: flex;
+    gap: 13px;
+}
+.theme-changer #theme{
+    margin: 0;
+    cursor: pointer;
+}
+header i{
+    font-size: 1.28em;
+}
+
+body.dark{
+    color: #fafafa;
+    background-color: #2f2f39;
+}
+
