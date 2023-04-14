@@ -5,21 +5,16 @@ header{
     padding: 20px;
 }
 
-section{
-    min-height: 80vh;
+sectio, section h2{
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-section h2{
-
-}
 
 input[type="number"]::-webkit-inner-spin-button{
     display: none;
 }
-h3{
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
+
 .cadastro > label, .form-check{
     padding-top: 30px;
 }
@@ -28,6 +23,7 @@ h3{
     padding-top: 20px;
     display: flex;
     justify-content: space-around;
+    padding-bottom: 30px;
 }
 
 .buttons button{
@@ -59,4 +55,6 @@ body.dark{
     color: #fafafa;
     background-color: #2f2f39;
 }
-
+#faqs{
+    min-height: 60vh;
+}
