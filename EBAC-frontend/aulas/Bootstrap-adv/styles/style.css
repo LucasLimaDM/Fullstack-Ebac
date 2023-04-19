@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 20px;
+}
+
+h1 {
+  margin: 0;
+}
+
+section h2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+section h3 {
+  padding: 15px;
+}
+
+.card {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.card a {
+  width: 100%;
+}
+
+.card.overlay {
+  color: #fafafa;
+}
+
+.card.overlay img {
+  filter: brightness(0.65);
+}
+
+.carousel-item img {
+  width: 100%;
+  aspect-ratio: 3/2;
+}
+
+.carousel.slide {
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+#dropdown-sec {
+  min-height: 400px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+#dropdown-sec h2 {
+  width: 100%;
+}
+#dropdown-sec .btn-group {
+  align-items: flex-start;
+}
+
+.modal-dialog {
+  background-color: var(--bs--modal--bg);
+}/*# sourceMappingURL=style.css.map */
