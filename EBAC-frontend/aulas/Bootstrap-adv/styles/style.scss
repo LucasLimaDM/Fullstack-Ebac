@@ -6,6 +6,11 @@ header{
     // background-color: #7511f5;
     // color: #fafafa;
     padding: 20px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #fafafa;
+    z-index: 2;
 }
 // theme changer CSS
 // header .form-check{
@@ -33,7 +38,12 @@ header{
 h1{
     margin: 0;
 }
-
+#menu{
+    padding-top: 12px;
+}
+section{
+    padding-top: 70px;
+}
 section h2{
     padding-top: 20px;
     padding-bottom: 20px;
@@ -81,4 +91,14 @@ section h3{
 }
 .modal-dialog{
     background-color:var(--bs--modal--bg);
+}
+.navbar-nav .nav-link.active{
+    color: #fafafa;
+}
+.navbar-nav .nav-link{
+    text-align: center;
+    
+}
+.tab-pane{
+    min-height: 400px;
 }

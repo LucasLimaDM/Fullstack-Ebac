@@ -11,8 +11,8 @@
 //         page.classList.remove('dark')
 //     }
 // })
-
-document.addEventListener('DOMContentLoaded', () => {
+// DOMContentLoaded
+document.querySelector('modal-sec button').addEventListener('click', () => {
     const modalEx = new bootstrap.Modal('#modal-ex');
     setTimeout(() => {
         modalEx.show()
