@@ -47,30 +47,51 @@
 
 [1,2,3,4,5].at(-2)// 4; retorna o valor da posição indicada
 
+    'Filter'
 [1,2,3,4,5].filter(n => n%2 == 0)// [2,4,6,8]; retorna um array com todos os valores que passarem no filtro
 
-[1,2,3,4].some()
+[['joão', 'augusto'], ['carlos', 'augusto'], ['joão', 'souza'], ['pedro', 'augusto']].filter(([nome, sobrenome]) => sobrenome === 'augusto' && nome.length > 4) // [['carlos', 'augusto'], ['pedro', 'augusto']]; pode extrair partes específicas de objetos e arrays, utilizando-as no processo de filtragem 
+
+[1,2,3,4].some(n => n > 0)
 
 [1,2,3].includes(2) // true; retorna true se o array possui o valor selecionado
+
+[1, 2, 3].every(n => n > 0)// true; retorna true caso todos os valores passem na validação da função
 
 'métodos de modificação do array'
 
 [1,2,3,4,5].map(n => n*2)// [2,4,6,8,10]; aplica uma propriedade a todos os valores do array
 
-// A minha tarefa do módulo 7 não está marcada como concluída, a pesar de já ter sido corrigida pelo professor, segue o print
+[['joão', 'augusto'], ['carlos', 'augusto'], ['joão', 'souza'], ['pedro', 'augusto']].map(([nome, sobrenome]) => `${nome} ${sobrenome}`) // 'joão augusto', 'carlos augusto', 'joão souza', 'pedro augusto']; pode extrair partes específicas de objetos e arrays, utilizando-as no processo de filtragem 
+
+
+[1, 2, 3].reverse() // [3, 2, 1]; inverte o array e retorna o array invertido
+
+[[1,2,3], ['a','b','c']].flat() // [1, 2, 3, 'a', 'b', 'c']; desaninha 0 array em um nível de acordo com o especificado como argumento
+
+// métodos aplicáveis a strings
+
+'hello world'.at(-1) // 'd'; 
+'hello world'[0] // 'h';
+'hello world'.indexOf('l') // 2;
+'hello world'.lastIndexOf('l') // 9;
+'hello world'.includes('e') // true;
+'hello world'.concat('!!') // 'hello world!!';
+'  hello world  '.trim() //  'hello world';
+
+
+
+
+// métodos para strings
+'hello world'.startsWith('h') // true;
+'hello world'.endsWith('o') // true;
 
 
 
 
 
-// mascara telefone
-const telefone = document.querySelector('#telefone');
 
-telefone.addEventListener('keyup', function () { 
-    telefone.value = telefone.value.replace(/\D/g,"");
-    telefone.value = telefone.value.replace(/^(\d{2})(\d)/g,"($1) $2")
-    telefone.value = telefone.value.replace(/(\d)(\d{4})$/,"$1-$2")
-})
+
 
 
 
