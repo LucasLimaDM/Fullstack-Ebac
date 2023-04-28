@@ -11,14 +11,22 @@
 //         page.classList.remove('dark')
 //     }
 // })
-// DOMContentLoaded
-document.querySelector('modal-sec button').addEventListener('click', () => {
+
+document.addEventListener('DOMContentLoaded', () => {
     const modalEx = new bootstrap.Modal('#modal-ex');
     setTimeout(() => {
         modalEx.show()
     }, 4000)
-})
+})   /*Faz o modal abrir automaticamente 4 segundos depois de abrir a pagina*/
 
+const btnCheckToast = document.querySelector('#btn-check-toast')
+const message = document.querySelector('#toast-message')
 
+if(btnCheckToast){
+    btnCheckToast.addEventListener('click',()=> {
+        const toast = new bootstrap.Toast(message);
+        toast.show();
+    })
+}
 
 

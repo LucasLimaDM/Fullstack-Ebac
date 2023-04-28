@@ -3,14 +3,16 @@
     padding: 0;
 }
 header{
-    // background-color: #7511f5;
-    // color: #fafafa;
+    background-color: #7511f5;
+    color: #fafafa;
     padding: 20px;
     position: sticky;
     top: 0;
     left: 0;
-    background-color: #fafafa;
-    z-index: 2;
+    z-index: 5;
+}
+header .nav-link{
+    color: #fafafa;
 }
 // theme changer CSS
 // header .form-check{
@@ -42,7 +44,7 @@ h1{
     padding-top: 12px;
 }
 section{
-    padding-top: 70px;
+    padding-top: 75px;
 }
 section h2{
     padding-top: 20px;
@@ -56,7 +58,14 @@ section h3{
     margin-top: 10px;
 }
 .card a{
-    width: 100%;
+    margin-left: 5%;
+    width: 90%;
+}
+.card.overlay a{
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    width: 90%;
 }
 
 .card.overlay{
@@ -77,9 +86,7 @@ section h3{
 
 #dropdown-sec{
     min-height: 400px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+    
 
     h2{
         width: 100%;
@@ -89,6 +96,11 @@ section h3{
         align-items: flex-start;
     }
 }
+
+#modal-sec{
+    min-height: 400px;
+}
+
 .modal-dialog{
     background-color:var(--bs--modal--bg);
 }
@@ -99,6 +111,25 @@ section h3{
     text-align: center;
     
 }
+.bi-list{
+    color: #fafafa;
+    font-size: 32px;
+}
+#btn-check-toast{
+    background-color: #ffc107;
+    padding: 6px;
+    color: black;
+}
 .tab-pane{
     min-height: 400px;
+    margin-bottom: 20px;
+    img{
+        max-width: 100%;
+    }
+}
+
+@media(max-width: 992px){
+    #btn-check-toast{
+        margin: 5px auto;
+    }
 }

@@ -22,8 +22,8 @@
         <div class="navbar navbar-expand-lg">
             <h1>Bootstrap Training Base</h1>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-dark navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="bi bi-list"></span>
             </button>
 
             <nav class="collapse navbar-collapse justify-content-end" id="menu">
@@ -45,7 +45,12 @@
                         <a class="nav-link" href="#modal-sec">Modal</a>
                     </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="#abas-sec">Abas</a>
+                    </li>
+
                 </ul>
+                <button type="button" class="nav-link btn btn-warning" id="btn-check-toast">Checar mensagens toast</button>
             </nav>
         </div>
 
@@ -66,14 +71,14 @@
     </header>
     
 
-    <main data-bs-spy="scroll" data-bs-target="#cabecalhof">
+    <main data-bs-spy="scroll" data-bs-target="#cabecalho">
         <section class="container" id="cards-sec">
             <h2>Veja a construção de Cards com Bootstrap!</h2>
             <div class="row">
         
-                <div class="col-4">
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="card">
-                        <img src="https://via.placeholder.com/180x180" alt="">
+                        <img src="https://via.placeholder.com/240x180" alt="">
                         <div class="card-body">
                             <h4 class="card-title">Produto muito estiloso</h4>
                             <h5 class="card-subtitle">R$334,95</h5>
@@ -82,9 +87,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="card">
-                        <img src="https://via.placeholder.com/180x180" alt="">
+                        <img src="https://via.placeholder.com/240x180" alt="">
                         <div class="card-body">
                             <h4 class="card-title">Produto muito estiloso</h4>
                             <h5 class="card-subtitle">R$334,95</h5>
@@ -94,9 +99,9 @@
         
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="card">
-                        <img src="https://via.placeholder.com/180x180" alt="">
+                        <img src="https://via.placeholder.com/240x180" alt="">
                         <div class="card-body">
                             <h4 class="card-title">Produto muito estiloso</h4>
                             <h5 class="card-subtitle">R$334,95</h5>
@@ -109,9 +114,9 @@
                 <div class="col-12">
                     <h3 class="display-6">Agora alguns com imagem em overlay</h3>
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="card overlay">
-                        <img src="https://via.placeholder.com/180x220" alt="">
+                        <img src="https://via.placeholder.com/240x180" alt="">
                         <div class="card-img-overlay">
                             <h4 class="card-title">Produto muito estiloso</h4>
                             <h5 class="card-subtitle">R$334,95</h5>
@@ -121,9 +126,9 @@
         
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="card overlay">
-                        <img src="https://via.placeholder.com/180x220" alt="">
+                        <img src="https://via.placeholder.com/240x180" alt="">
                         <div class="card-img-overlay">
                             <h4 class="card-title">Produto muito estiloso</h4>
                             <h5 class="card-subtitle">R$334,95</h5>
@@ -133,9 +138,9 @@
         
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="card overlay">
-                        <img src="https://via.placeholder.com/180x220" alt="">
+                        <img src="https://via.placeholder.com/240x180" alt="">
         
                         <div class="card-img-overlay">
                             <h4 class="card-title">Produto muito estiloso</h4>
@@ -183,103 +188,161 @@
             </div>
         </section>
         <section id="dropdown-sec" class="container">
-            <h2>Veja agora um menu dropdown usando Bootstrap!</h2>
-            <div class="dropdown">
-                <button class="btn-primary btn dropdown-toggle" data-bs-toggle="dropdown">Cadastrar</button>
-                <ul class="dropdown-menu" >
-                    <li class="dropdown-item">
-                        <a href="#">Novo Usuário</a>
-                    </li>
-                    <li class="dropdown-item">
-                        <a href="#">Novo Fornecedor</a>
-                    </li>
-                    <li class="dropdown-item">
-                        <a href="#">Novo Fornecedor</a>
-                    </li>
-                </ul>
+            <div class="row">
+                <h2>Veja agora um menu dropdown usando Bootstrap!</h2>
             </div>
-            <div class="dropdown">
-                <button class="btn-primary btn" >Cadastrar</button>
-                <button class="btn-primary btn dropdown-toggle" data-bs-toggle="dropdown"></button>
-                <ul class="dropdown-menu" >
-                    <li class="dropdown-item">
-                        <a href="#">Novo Usuário</a>
-                    </li>
-                    <li class="dropdown-item">
-                        <a href="#">Novo Fornecedor</a>
-                    </li>
-                    <li class="dropdown-item">
-                        <a href="#">Novo Fornecedor</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="btn-group">
-                <button class="btn-primary btn" >Cadastrar</button>
-                <button class="btn-primary btn dropdown-toggle" data-bs-toggle="dropdown"></button>
-                <ul class="dropdown-menu" >
-                    <li class="dropdown-item">
-                        <a href="#">Novo Usuário</a>
-                    </li>
-                    <li class="dropdown-item">
-                        <a href="#">Novo Fornecedor</a>
-                    </li>
-                    <li class="dropdown-item">
-                        <a href="#">Novo Fornecedor</a>
-                    </li>
-                </ul>
+
+            <div class="row">
+
+                <div class="dropdown col-4">
+
+                    <button class="btn-primary btn dropdown-toggle" data-bs-toggle="dropdown">Cadastrar</button>
+
+                    <ul class="dropdown-menu" >
+                        <li class="dropdown-item">
+                            <a href="#">Novo Usuário</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#">Novo Fornecedor</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#">Novo Fornecedor</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="dropdown col-4">
+
+                    <button class="btn-primary btn" >Cadastrar</button>
+
+                    <button class="btn-primary btn dropdown-toggle" data-bs-toggle="dropdown"></button>
+
+                    <ul class="dropdown-menu" >
+                        <li class="dropdown-item">
+                            <a href="#">Novo Usuário</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#">Novo Fornecedor</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#">Novo Fornecedor</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="btn-group col-4">
+                    <button class="btn-primary btn" >Cadastrar</button>
+                    <button class="btn-primary btn dropdown-toggle" data-bs-toggle="dropdown"></button>
+                    <ul class="dropdown-menu" >
+                        <li class="dropdown-item">
+                            <a href="#">Novo Usuário</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#">Novo Fornecedor</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#">Novo Fornecedor</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
         <section class="container" id="modal-sec">
-            <h2>Veja agora o uso de um modal com o Bootstrap</h2>
-            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal-ex">Abrir Modal</button>
+            <h2>E reveja o modal, que é a mensagem de boas vidas!</h2>
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal-ex">Abrir Boas Vindas</button>
             <div id="modal-ex" class="modal" data-bs-backdrop="static">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5>Título da Modal</h5>
-                            <button class="modal-close btn btn-danger" data-bs-dismiss="modal" type="button">X</button>
+                            <h5>Bem vindo ao Bootstrap Training Base!</h5>
+                            <button class="btn-close btn btn-danger" data-bs-dismiss="modal" type="button"></button>
                         </div>
                         <div class="modal-body">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, veritatis nostrum nesciunt impedit perferendis in ipsam, quasi, vero iusto earum dignissimos aperiam amet magnam eveniet modi consequuntur enim veniam voluptatum.</p>
+                            <p>Essa página tem o intuito de conter todas as principais funcionalidades do bootstrap, e claro, responder à tarefa do módulo de Bootstrap avançado. Inseri os grids com os cards logo no início da página e após essa exigência ser concluída, continuei praticando as outras funcionalidades.</p>
                         </div>
                         <div class="modal-footer">
-                            <h5>Rodapé da Modal</h5>
+                            <h5>Boa Visita!</h5>
         
                             <button class="modal-close btn btn-success" data-bs-dismiss="modal" type="button">Continuar</button>
-        
-                            <button class="modal-close btn btn-danger" data-bs-dismiss="modal" type="button">Cancelar</button>
+    
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+
+
         <section id="abas-sec" class="container">
-            <nav class="nav-tabs nav">
-                <button data-bs-toggle="tab" data-bs-target="#aba1" class="nav-link active" type="button">Primeira Aba</button>
+            <h2>Agora é a vez das abas!</h2>
+            <nav class="nav-tabs nav pt-3">
+                <button data-bs-toggle="tab" data-bs-target="#aba1" class="nav-link active" type="button">Coelhinho</button>
 
-                <button data-bs-toggle="tab" data-bs-target="#aba2" class="nav-link" type="button">Segunda Aba</button>
+                <button data-bs-toggle="tab" data-bs-target="#aba2" class="nav-link" type="button">Macaquinho</button>
 
-                <button data-bs-toggle="tab" data-bs-target="#aba3" class="nav-link" type="button">Terceira Aba</button>
+                <button data-bs-toggle="tab" data-bs-target="#aba3" class="nav-link" type="button">Patinhos</button>
 
             </nav>
 
             <div class="tab-content">
                 <div class="tab-pane active" id="aba1">
-                    Conteúdo da Aba 1
+                    <img src="images/coelho.jpg" alt="">
                 </div>
 
                 <div class="tab-pane" id="aba2">
-                    Conteúdo da Aba 2
+                    <img src="images/mamaco.jpg" alt="">
                 </div>
 
                 <div class="tab-pane" id="aba3">
-                    Conteúdo da Aba 3
+                    <img src="images/patinho.jpg" alt="">
                 </div>
 
             </div>
 
 
+
+            <nav class="nav-pills nav pt-3">
+                <button data-bs-toggle="tab" data-bs-target="#aba4" class="nav-link active" type="button">Coelhinho</button>
+
+                <button data-bs-toggle="tab" data-bs-target="#aba5" class="nav-link" type="button">Macaquinho</button>
+
+                <button data-bs-toggle="tab" data-bs-target="#aba6" class="nav-link" type="button">Patinhos</button>
+
+            </nav>
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="aba4">
+                    <img src="images/coelho.jpg" alt="">
+                </div>
+
+                <div class="tab-pane" id="aba5">
+                    <img src="images/mamaco.jpg" alt="">
+                </div>
+
+                <div class="tab-pane" id="aba6">
+                    <img src="images/patinho.jpg" alt="">
+                </div>
+
+            </div>
+
+
+        </section>
+
+        <section>
+            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                <div class="toast" id="toast-message">
+                    <div class="toast-header">
+                        <strong>Importante</strong>
+                    </div>
+                    <div class="toast-body">
+                        Você possui 10 mensagens não lidas
+
+                        <div class="mt-2 pt-2 border-top"><button class="btn btn-danger" data-bs-dismiss="toast">Descartar</button></div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -293,3 +356,5 @@
     <script src="lib/Bootstrap 5/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+

@@ -4,12 +4,17 @@
 }
 
 header {
+  background-color: #7511f5;
+  color: #fafafa;
   padding: 20px;
   position: sticky;
   top: 0;
   left: 0;
-  background-color: #fafafa;
-  z-index: 2;
+  z-index: 5;
+}
+
+header .nav-link {
+  color: #fafafa;
 }
 
 h1 {
@@ -21,7 +26,7 @@ h1 {
 }
 
 section {
-  padding-top: 70px;
+  padding-top: 75px;
 }
 
 section h2 {
@@ -39,7 +44,15 @@ section h3 {
 }
 
 .card a {
-  width: 100%;
+  margin-left: 5%;
+  width: 90%;
+}
+
+.card.overlay a {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 90%;
 }
 
 .card.overlay {
@@ -62,15 +75,16 @@ section h3 {
 
 #dropdown-sec {
   min-height: 400px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
 }
 #dropdown-sec h2 {
   width: 100%;
 }
 #dropdown-sec .btn-group {
   align-items: flex-start;
+}
+
+#modal-sec {
+  min-height: 400px;
 }
 
 .modal-dialog {
@@ -85,6 +99,27 @@ section h3 {
   text-align: center;
 }
 
+.bi-list {
+  color: #fafafa;
+  font-size: 32px;
+}
+
+#btn-check-toast {
+  background-color: #ffc107;
+  padding: 6px;
+  color: black;
+}
+
 .tab-pane {
   min-height: 400px;
+  margin-bottom: 20px;
+}
+.tab-pane img {
+  max-width: 100%;
+}
+
+@media (max-width: 992px) {
+  #btn-check-toast {
+    margin: 5px auto;
+  }
 }/*# sourceMappingURL=style.css.map */
