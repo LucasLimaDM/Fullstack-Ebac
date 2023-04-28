@@ -1,10 +1,21 @@
 function Carousel(containerSelector) {
     this.containerCarousel = document.querySelector(containerSelector);
-    this.containerScroll = document.querySelector(`${containerSelector} > .container-scroll`);
-    this.imageList = document.querySelector(`${containerSelector} .image-list`);
+    this.containerCarousel.classList.add('carousel-container')
+    const images = document.querySelectorAll(`${containerSelector} img`)
 
-    this.containerCarousel.setAttribute('class', 'container-carousel');
+
+    
+    images.forEach((image, i) => {
+        imgContainer = document.createElement('figure')
+        this.containerCarousel.append(imgContainer)
+        imgContainer.append(image)
+    })
+
+    console.log("🚀 ~ images:", images)
+
 }
 
 const carousel = new Carousel('#main-carousel')
 console.log(carousel)
+
+const carousel2 = new Carousel('.carousel2')
