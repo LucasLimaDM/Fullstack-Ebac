@@ -69,6 +69,20 @@
 
 [[1,2,3], ['a','b','c']].flat() // [1, 2, 3, 'a', 'b', 'c']; desaninha 0 array em um nível de acordo com o especificado como argumento
 
+[1,2,3,4,5,6,7,8].sort(()=> Math.random() - 0.5) // retorna valores embaralhados de forma aleatória
+
+[1,3,5,9,1,3,0,4,8,23,7,2].sort((numA, numB) => {
+    if(numA > numB){
+        return 1
+    } else if(numB > numA){
+        return -1
+    } else {
+        return 0
+    }
+}) // ordena em ordem crescente
+
+// * ... operator pode ser usado ao invés do flat
+
 // métodos aplicáveis a strings
 
 'hello world'.at(-1) // 'd'; 
