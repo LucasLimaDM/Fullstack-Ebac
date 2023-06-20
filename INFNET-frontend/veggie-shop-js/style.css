@@ -5,6 +5,8 @@
     --dark-green: #204010;
     --bg-dark: #151205;
     --dark-contrast: #353225;
+    --border-color-dark: #a0a0a0;
+    --contrast-orange: #ff5500;
 
     --card-width: 350px;
     --header-height: 110px;
@@ -46,8 +48,7 @@ h1{
 }
 section{
   position: relative;
-  padding: 20px 20px; 
-  padding-top: var(--header-height);
+  padding: var(--header-height) 20px 20px 20px; 
 }
 
 
@@ -75,6 +76,7 @@ h1, #banner h2, footer h2, #mensagem label, #mensagem input, #mensagem textarea{
 .hide{
   display: none;
 }
+
 .container{
   width: 100%;
   max-width: 1320px;
@@ -159,9 +161,6 @@ body .menu-bar ul{
 .menu-bar.open{
     left: 0;
     transition: left 0.8s;
-}
-input[type=checkbox], input[type=radio]{
-    margin-right: 4px;
 }
 
 
@@ -283,14 +282,13 @@ body #localizacao .container{
 .text-inputs input:focus ~ label, .text-inputs textarea:focus ~ label{
   display: none;
 }
+.select-inputs label{
+    cursor: pointer;
+}
 
 #mensagem h3{
   margin-top: 20px;
   margin-bottom: 20px;
-}
-
-#mensagem input[type=radio]{
-  height: 24px;
 }
 
 button[type=submit]{

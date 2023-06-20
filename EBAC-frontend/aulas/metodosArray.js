@@ -48,7 +48,7 @@
 [1,2,3,4,5].at(-2)// 4; retorna o valor da posição indicada
 
     'Filter'
-[1,2,3,4,5].filter(n => n%2 == 0)// [2,4,6,8]; retorna um array com todos os valores que passarem no filtro
+[1,2,3,4,5].filter(n => n%2 === 0)// [2,4,6,8]; retorna um array com todos os valores que passarem no filtro
 
 [['joão', 'augusto'], ['carlos', 'augusto'], ['joão', 'souza'], ['pedro', 'augusto']].filter(([nome, sobrenome]) => sobrenome === 'augusto' && nome.length > 4) // [['carlos', 'augusto'], ['pedro', 'augusto']]; pode extrair partes específicas de objetos e arrays, utilizando-as no processo de filtragem 
 
