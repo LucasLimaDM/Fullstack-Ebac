@@ -38,30 +38,38 @@ radioButtons.forEach(radioButton => {
 const checkMarkAll = document.querySelectorAll('.checkbox-btn.mark-all');
 const checkMarkOne = document.querySelectorAll('.checkbox-btn.mark-one');
 
+//* possibilidade de resumir markOne e markAll a uma única sequencia de comandos
 checkMarkOne.forEach(checkbox => {
-    checkbox.addEventListener('click', ()=>{ clickCheckbox(checkbox) });
+    checkbox.addEventListener('click', ()=>{ clickMarkOne(checkbox) });
 
     const label = document.querySelector(`label[for=${checkbox.id}]`);
 
-    label.addEventListener('click', ()=>{ clickCheckbox(checkbox) });
+    label.addEventListener('click', ()=>{ clickMarkOne(checkbox) });
 });
 
 checkMarkAll.forEach(checkbox => {
-    checkbox.addEventListener('click', () => {
-        const checkName = checkbox.attributes.name.value;
-        const sameNameChecks = document.querySelectorAll(`.checkbox-btn[name=${checkName}].mark-one`)
-        if(checkbox.classList.contains('mark')){
-            sameNameChecks.forEach(checkbox => { clickCheckbox(checkbox) });
-        } else{
+    checkbox.addEventListener('click', () => { clickMarkAll(checkbox)});
+    
+    const label = document.querySelector(`label[for=${checkbox.id}]`);
 
-    }
-    })
-
+    label.addEventListener('click', ()=>{ clickMarkAll(checkbox) });
 });
 
 
+function clickMarkAll(checkbox){
+    const checkName = checkbox.attributes.name.value;
+    const sameNameChecks = document.querySelectorAll(`.checkbox-btn[name=${checkName}].mark-one`);
 
-function clickCheckbox(checkbox){
+    //* possibilidade de resumir esse if else para um código com ternário
+    if(checkbox.classList.contains('checked')){
+        sameNameChecks.forEach(checkbox => {checkbox.classList.remove('checked')});
+    } else{
+        sameNameChecks.forEach(checkbox => {checkbox.classList.add('checked')});
+    }
+    atualizaMarkAll(checkName);
+}
+
+function clickMarkOne(checkbox){
     checkbox.classList.toggle('checked');
     atualizaMarkAll(checkbox.attributes.name.value);
 }
@@ -77,7 +85,7 @@ function atualizaMarkAll(checkName){
 
     if(checkOnes.every(b=>b===false)){
         checkAll.forEach(checkbox => {
-            checkbox.classList.add('mark');
+            // checkbox.classList.add('mark');
             checkbox.classList.remove('dismark', 'checked', 'half');
 
             
@@ -85,13 +93,13 @@ function atualizaMarkAll(checkName){
     } else if(checkOnes.every(b=>b===true)){
         checkAll.forEach(checkbox => {
             checkbox.classList.add('dismark', 'checked');
-            checkbox.classList.remove('mark', 'half');
+            checkbox.classList.remove( 'half');
             
         });
     } else if(!checkOnes.every(b=>b===true) && !checkOnes.every(b=>b===false)){
         checkAll.forEach(checkbox => {
             checkbox.classList.add('half', 'checked');
-            checkbox.classList.remove('mark', 'dismark');
+            checkbox.classList.remove( 'dismark');
             // checkbox.classList.remove('dismark');
         });
     }
