@@ -162,23 +162,23 @@
 				<div class="text-inputs">
 	
 					<div class="input-container">
-						<input type="text" autocomplete="name" required id="nome-contato">
-						<label for="nome-contato">Nome Completo</label>
+						<input type="text" autocomplete="name" id="nome-contato" name="nome-contato" title="Preencha esse campo">
+						<label class="hide" for="nome-contato">Nome Completo</label>
 					</div>
 	
 					<div class="input-container">
-						<input type="email" autocomplete="email" required id="email-contato">
-						<label for="email-contato">Email:</label>
+						<input type="email" autocomplete="email" id="email-contato" name="email-contato" title="Preencha esse campo">
+						<label class="hide" for="email-contato">Email:</label>
 					</div>
 					
 					<div class="input-container">
-						<input type="tel" autocomplete="tel" required id="tel-contato">
-						<label for="tel-contato">Telefone:</label>
+						<input type="tel" autocomplete="tel" id="tel-contato" name="nome-contato" title="Preencha esse campo">
+						<label class="hide" for="tel-contato">Telefone:</label>
 					</div>
 	
 					<div class="input-container">
-						<textarea id="mensagem-contato" draggable="false"></textarea>
-						<label for="mensagem-contato">Sua mensagem:</label>
+						<textarea id="mensagem-contato" name="nome-contato" title="Preencha esse campo"></textarea>
+						<label class="hide" for="mensagem-contato">Sua mensagem:</label>
 					</div>
 					
 				</div>
@@ -216,15 +216,20 @@
                         <h3>Tipo de carne favorita</h3>
 
                         
-                        
+                        <!-- TODO: trocar seta do select -->
                         <div class="select-btn" name="carne-favorita">
-                            <div class="selected"><span>Selecione</span></div>
+                            <i class="material-symbols-outlined">done</i>
+
+                            <div class="selected">
+                                <span value="selecione">Selecione</span>
+                            </div>
+
                             <div class="select-options">
-                                <span>Bovina</span>
-                                <span>Suína</span>
-                                <span>Aves</span>
-                                <span>Frutos do Mar</span>
-                                <span>Outros</span>
+                                <span value="suina">Suína</span>
+                                <span value="bovina">Bovina</span>
+                                <span value="aves">Aves</span>
+                                <span value="frutos-mar">Frutos do Mar</span>
+                                <span value="outros">Outros</span>
                             </div>
                         </div>
                     </div>
@@ -265,7 +270,7 @@
 
 			    </div>
 			
-				<button type="submit" id="enviar-contato">Enviar</button>
+				<button type="button" class="submit-btn" id="submit-contato">Enviar</button>
 				
 			</form>
 	    </section>

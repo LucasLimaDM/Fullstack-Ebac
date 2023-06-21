@@ -72,7 +72,7 @@
     overflow-y: hidden;
     display: none;
 }
-.select-options.open{
+.select-btn.open .select-options{
     display: block;
     transition: height 1s;
     top: 32px;
@@ -81,4 +81,15 @@
     height: fit-content;
     z-index: 1;
     border-radius: 0 0 10px 10px;
+}
+.select-btn i{
+    position: absolute;
+    right: 4px;
+    top: 6px;
+    transition: transform 0.5s;
+
+}
+.select-btn.open i{
+    transform: rotate(180deg);
+    transition: transform 0.5s;
 }

@@ -274,7 +274,7 @@ body #localizacao .container{
   cursor: text;
   font-size: 1em;
 }
-.text-inputs input, .text-inputs textarea, #enviar-contato{
+.text-inputs input, .text-inputs textarea, #submit-contato{
   padding: 5px;
   font-size: 1em;
   width: 100%;
@@ -291,14 +291,14 @@ body #localizacao .container{
   margin-bottom: 20px;
 }
 
-button[type=submit]{
+.submit-btn{
     color: var(--basewhite);
     background-color: var(--main-color);
     font-family: Oswald, serif;
     height: 45px;
     font-size: 2em;
 }
-button#enviar-contato{
+button#submit-contato{
     font-size: 1.4em;
     font-weight: 500;
     letter-spacing: 0.1em;
