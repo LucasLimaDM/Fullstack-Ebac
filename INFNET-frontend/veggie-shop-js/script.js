@@ -14,12 +14,12 @@ contatoInputs.forEach(input => {
         else { label.classList.remove('hide'); }
     })
 });
-//TODO: Não permitir o usuário de colar texto
-//* Validação no submit não permite entregar com caractere especial, mesmo que o digito entre no campo. Ainda funciona
+
 const telContato = document.querySelector('#tel-contato');
-telContato.addEventListener('keypress', e => {
-    e.preventDefault();
-    e.target.value += e.key.split('').filter(c=>c!=='(' && c!==')' && c!=='-' && c!=='.').join('')
+telContato.addEventListener('input', e => {
+
+    e.target.value = e.target.value.split('').filter(c=>c!=='(' && c!==')' && c!=='-' && c!==' ').join('');
+
     console.log(e);
 });
 telContato.addEventListener('input', e => console.log(e));
@@ -28,6 +28,7 @@ telContato.addEventListener('input', e => console.log(e));
 const btnSubmit = document.querySelector('#submit-contato');
 
 btnSubmit.addEventListener('click', () => {
+    const telContato = document.querySelector('#tel-contato');
     const nomeContato = document.querySelector('#nome-contato');
     const emailContato = document.querySelector('#email-contato');
     const mensagemContato = document.querySelector('#mensagem-contato');
@@ -40,7 +41,7 @@ btnSubmit.addEventListener('click', () => {
     } else if(!emailIsValid(emailContato.value)){
         alert('O email deve ser um email válido');
     } else if(!telIsValid(telContato.value)){
-        alert('O telefone deve conter 10 dígitos e sem caracteres especiais');
+        alert('O telefone deve conter 11 dígitos e sem caracteres especiais');
     } else if(!mensagemIsValid(mensagemContato.value)){
         alert('A mensagem deve conter ao menos 6 símbolos válidos');
     } else if(!activeAreValid(radioBtns)){
@@ -66,15 +67,15 @@ function emailIsValid(email){
 }
 
 function telIsValid(tel){
-    return tel.trim().length === 10
+    return tel.trim().length === 11
     && !tel.includes('(')
     && !tel.includes(')')
     && !tel.includes('-')
-    && !tel.includes('.');
+    && !tel.includes(' ');
 }
 
 function mensagemIsValid(mensagem){
-    return mensagem.split('').filter(c=>c!==' ').length >= 6;
+    return mensagem.split('').filter(c=>c!==' ').length >= 5;
 }
 
 function activeAreValid(activeBtn){

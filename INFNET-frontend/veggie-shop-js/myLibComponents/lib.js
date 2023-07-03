@@ -16,13 +16,18 @@ window.onresize = ()=> { menuBar.classList.remove('open'); }
 const radioButtons = document.querySelectorAll('.radio-btn');
 
 radioButtons.forEach(radioButton => {
-    radioButton.addEventListener('click', ev => {
-        const radioButton = ev.target;
-        const sameNameButtons = document.querySelectorAll(`.radio-btn[name=${radioButton.attributes.name.value}]`);
+    radioButton.addEventListener('click',()=>{clickRadio(radioButton)});
+
+    const label = document.querySelector(`label[for=${radioButton.id}]`);
+    label.addEventListener('click', ()=>{clickRadio(radioButton)});
+});
+
+
+function clickRadio(radioButton) {
+    const sameNameButtons = document.querySelectorAll(`.radio-btn[name=${radioButton.attributes.name.value}]`);
         sameNameButtons.forEach(sameNameButton => sameNameButton.classList.remove('checked'));
         radioButton.classList.toggle('checked');
-    });
-});
+}
 
 //checkbox
 
@@ -75,7 +80,6 @@ function atualizaMarkAll(checkName){
 
     if(checkOnes.every(b=>b===false)){
         checkAll.forEach(checkbox => {
-            // checkbox.classList.add('mark');
             checkbox.classList.remove('dismark', 'checked', 'half');
 
             
@@ -90,7 +94,6 @@ function atualizaMarkAll(checkName){
         checkAll.forEach(checkbox => {
             checkbox.classList.add('half', 'checked');
             checkbox.classList.remove( 'dismark');
-            // checkbox.classList.remove('dismark');
         });
     }
 }
@@ -102,20 +105,21 @@ selectBtns.forEach(selectBtn => {
 
     const selectOptions = document.querySelectorAll(`.select-btn[name=${selectBtnName}] span`);
 
+    const arrowSelect = document.querySelector(`.select-btn[name=${selectBtnName}] i`);
+    arrowSelect.addEventListener('click', ev => {
+        console.log(ev.target.parentNode.parentNode.classList.toggle('open'));
+    });
     selectOptions.forEach(option => {
-
             option.addEventListener('click', ev =>{
 
                 if(ev.target.parentNode.classList.contains('selected')){
 
-                    const selected = ev.target.parentNode;
-
-                    selected.parentNode.classList.toggle('open');
+                    ev.target.parentNode.parentNode.classList.toggle('open');
 
                 } else {
                     const selectOption = ev.target.parentNode;
 
-                    selectOption.append(selectOption.previousElementSibling.firstElementChild);
+                    selectOption.append(selectOption.previousElementSibling.children[1]);
 
                     selectOption.previousElementSibling.append(option);
 

@@ -87,9 +87,11 @@
     right: 4px;
     top: 6px;
     transition: transform 0.5s;
-
 }
 .select-btn.open i{
     transform: rotate(180deg);
     transition: transform 0.5s;
+}
+.select-btn i{
+    cursor: pointer;
 }
