@@ -162,22 +162,26 @@
 				<div class="text-inputs">
 	
 					<div class="input-container">
-						<input type="text" autocomplete="name" id="nome-contato" name="nome-contato" title="Preencha esse campo">
+                        <p class="error-message hide">O nome deve conter ao menos dois nomes</p>
+						<input type="text" autocomplete="name" id="nome-contato" name="nome" title="Preencha esse campo">
 						<label class="hide" for="nome-contato">Nome Completo</label>
 					</div>
 	
 					<div class="input-container">
-						<input type="email" autocomplete="email" id="email-contato" name="email-contato" title="Preencha esse campo">
+                        <p class="error-message hide">O email deve ser um email válido</p>
+						<input type="email" autocomplete="email" id="email-contato" name="email" title="Preencha esse campo">
 						<label class="hide" for="email-contato">Email:</label>
 					</div>
 					
 					<div class="input-container">
-						<input type="tel" autocomplete="tel" id="tel-contato" name="nome-contato" title="Preencha esse campo">
+                        <p class="error-message hide">O telefone deve conter 11 dígitos numéricos</p>
+						<input type="tel" autocomplete="tel" id="tel-contato" name="tel" title="Preencha esse campo">
 						<label class="hide" for="tel-contato">Telefone:</label>
 					</div>
 	
 					<div class="input-container">
-						<textarea id="mensagem-contato" name="nome-contato" title="Preencha esse campo"></textarea>
+                        <p class="error-message hide">A mensagem deve conter ao menos 6 letras</p>
+						<textarea id="mensagem-contato" name="mensagem" title="Preencha esse campo"></textarea>
 						<label class="hide" for="mensagem-contato">Sua mensagem:</label>
 					</div>
 					

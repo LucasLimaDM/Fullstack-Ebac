@@ -1,9 +1,8 @@
 // ! Esse código não foi copiado de nenhuma fonte externa, é uma biblioteca criada por mim -Lucas Lima Dias Messias para o Projeto de Bloco da INFNET 
 
-//? Como não permitir ao usuário colar dentro do input
 //? Como fechar um menu ou dropdown ao clicar fora dele
 
-// hamburguer-menu config
+// hamburguer-menu config'  
 const menu = document.querySelector('.menu-hamburguer');
 const menuBar = document.querySelector('.menu-bar');
 
@@ -16,52 +15,51 @@ window.onresize = ()=> { menuBar.classList.remove('open'); }
 const radioButtons = document.querySelectorAll('.radio-btn');
 
 radioButtons.forEach(radioButton => {
-    radioButton.addEventListener('click',()=>{clickRadio(radioButton)});
+    radioButton.addEventListener('click', event=>{clickRadio(event.target)});
 
     const label = document.querySelector(`label[for=${radioButton.id}]`);
-    label.addEventListener('click', ()=>{clickRadio(radioButton)});
+    
+    label.addEventListener('click', event=>{
+        const radioButton = document.querySelector(`#${event.target.attributes.for.value}`)
+        clickRadio(radioButton)});
 });
 
 
 function clickRadio(radioButton) {
     const sameNameButtons = document.querySelectorAll(`.radio-btn[name=${radioButton.attributes.name.value}]`);
         sameNameButtons.forEach(sameNameButton => sameNameButton.classList.remove('checked'));
+
         radioButton.classList.toggle('checked');
 }
 
 //checkbox
 
-const checkMarkAll = document.querySelectorAll('.checkbox-btn.mark-all');
-const checkMarkOne = document.querySelectorAll('.checkbox-btn.mark-one');
-
-//* possibilidade de resumir markOne e markAll a uma única sequencia de comandos
-checkMarkOne.forEach(checkbox => {
-    checkbox.addEventListener('click', ()=>{ clickMarkOne(checkbox) });
-
+const checkboxes = document.querySelectorAll('.checkbox-btn');
+checkboxes.forEach(checkbox => {
+        
     const label = document.querySelector(`label[for=${checkbox.id}]`);
 
-    label.addEventListener('click', ()=>{ clickMarkOne(checkbox) });
+    checkbox.addEventListener('click', event=>{ 
+        const isMarkAll = checkbox.classList.contains('mark-all');
+        console.log(event);
+        (isMarkAll ? clickMarkAll : clickMarkOne)(checkbox) 
+    });
+
+    label.addEventListener('click', event=>{ 
+        const checkbox = document.querySelector(`#${event.target.attributes.for.value}`);
+        const isMarkAll = checkbox.classList.contains('mark-all');
+        (isMarkAll ? clickMarkAll : clickMarkOne)(checkbox)  });
 });
-
-checkMarkAll.forEach(checkbox => {
-    checkbox.addEventListener('click', () => { clickMarkAll(checkbox)});
-    
-    const label = document.querySelector(`label[for=${checkbox.id}]`);
-
-    label.addEventListener('click', ()=>{ clickMarkAll(checkbox) });
-});
-
 
 function clickMarkAll(checkbox){
     const checkName = checkbox.attributes.name.value;
-    const sameNameChecks = document.querySelectorAll(`.checkbox-btn[name=${checkName}].mark-one`);
+    const sameNameCheckOnes = document.querySelectorAll(`.checkbox-btn[name=${checkName}].mark-one`);
+    const checkboxIsChecked = checkbox.classList.contains('checked');
 
-    //* possibilidade de resumir esse if else para um código com ternário
-    if(checkbox.classList.contains('checked')){
-        sameNameChecks.forEach(checkbox => {checkbox.classList.remove('checked')});
-    } else{
-        sameNameChecks.forEach(checkbox => {checkbox.classList.add('checked')});
-    }
+    sameNameCheckOnes.forEach(checkOne => {
+        checkOne.classList[checkboxIsChecked ? 'remove' : 'add']('checked')
+    });
+
     atualizaMarkAll(checkName);
 }
 
@@ -106,18 +104,18 @@ selectBtns.forEach(selectBtn => {
     const selectOptions = document.querySelectorAll(`.select-btn[name=${selectBtnName}] span`);
 
     const arrowSelect = document.querySelector(`.select-btn[name=${selectBtnName}] i`);
-    arrowSelect.addEventListener('click', ev => {
-        console.log(ev.target.parentNode.parentNode.classList.toggle('open'));
+    arrowSelect.addEventListener('click', event => {
+        console.log(event.target.parentNode.parentNode.classList.toggle('open'));
     });
     selectOptions.forEach(option => {
-            option.addEventListener('click', ev =>{
+            option.addEventListener('click', event =>{
 
-                if(ev.target.parentNode.classList.contains('selected')){
+                if(event.target.parentNode.classList.contains('selected')){
 
-                    ev.target.parentNode.parentNode.classList.toggle('open');
+                    event.target.parentNode.parentNode.classList.toggle('open');
 
                 } else {
-                    const selectOption = ev.target.parentNode;
+                    const selectOption = event.target.parentNode;
 
                     selectOption.append(selectOption.previousElementSibling.children[1]);
 

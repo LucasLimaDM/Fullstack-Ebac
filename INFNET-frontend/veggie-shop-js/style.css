@@ -7,6 +7,7 @@
     --dark-contrast: #353225;
     --border-color-dark: #a0a0a0;
     --contrast-orange: #ff5500;
+    --error-red: #ff1010;
 
     --card-width: 350px;
     --header-height: 110px;
@@ -279,9 +280,7 @@ body #localizacao .container{
   font-size: 1em;
   width: 100%;
 }
-.text-inputs input:focus ~ label, .text-inputs textarea:focus ~ label{
-  display: none;
-}
+
 .select-inputs label{
     cursor: pointer;
 }
@@ -334,6 +333,12 @@ footer .container{
 
 p a{
   text-decoration: underline;
+}
+
+.error-message{
+    color: var(--error-red);
+    position: absolute;
+    top: -22px;
 }
 
 @media(min-width:935px){
