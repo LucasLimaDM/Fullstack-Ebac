@@ -20,4 +20,8 @@
 .navbar .nav .nav-link.active {
   color: #00aaee;
   font-weight: bold;
+}
+
+#navbar-toggler:focus {
+  border-color: #000028;
 }/*# sourceMappingURL=style.css.map */
