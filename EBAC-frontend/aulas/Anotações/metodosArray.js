@@ -100,7 +100,15 @@
 'hello world'.startsWith('h') // true;
 'hello world'.endsWith('o') // true;
 
-
+//DOM methods
+/* 
+<li class="list-item"><li>
+*/
+if(
+    document.querySelector(li).matches('.list-item')
+){
+    document.querySelector(li).className = '' 
+}
 
 
 
