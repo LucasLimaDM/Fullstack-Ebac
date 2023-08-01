@@ -1,0 +1,15 @@
+
+
+@mixin not-checked-hover {
+    &:not(:checked):hover{
+        @content;
+    }
+}
+
+input[type=radio]{
+
+    @include not-checked-hover{
+        box-shadow: 0 0 3px rgb(255, 106, 0);
+    }
+}
+
