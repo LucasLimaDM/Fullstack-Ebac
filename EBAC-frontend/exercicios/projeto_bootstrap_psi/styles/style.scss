@@ -30,7 +30,7 @@ textarea{
             transition: translate 0.2s;
         }
         .nav-link:hover{
-            translate: 0 2px;
+            translate: 2px 0;
             transition: translate 0.2s;
         }
         .nav-link.active{
@@ -40,12 +40,20 @@ textarea{
     }
 }
 
+h3, h4{
+    padding: 12px 0;
+}
+
 img{
     width: 100%;
 }
 
-section{
-    padding-bottom: 80px;
+section:not(#hero-section){
+    padding: 50px 0 24px 0;
+
+    &:nth-child(odd){
+        background-color: $base-white;
+    }
 }
 
 #hero-section{
@@ -53,12 +61,27 @@ section{
     margin-bottom: 40px;
 
     img{
-        object-fit: cover;
+        width: 100%;
     }
 }
 
 .keep-scroll-arrow{
     margin-top: 40px;
+}
+
+#contato-submit{
+    background-color: $contrast-base-color;
+    color: $base-white;
+    margin: 16px 0px;
+    font-weight: bold;
+    &:hover{
+        background-color: $light-contrast;
+    }
+
+}
+
+h2{
+    padding: 36px 0 24px 0;
 }
 
 input, button, textarea{
@@ -131,7 +154,14 @@ input, button, textarea{
 
 //md
 @media(min-width: 768px){
-    
+    .navbar{
+        .nav{
+            .nav-link:hover{
+                translate: 0 2px;
+                transition: translate 0.2s;
+            }
+        }
+    }
     
     #presentation-section {
         .row{
@@ -155,12 +185,10 @@ input, button, textarea{
             }
 
             img{
-                height: 360px;
-                width: 420px;
+                max-width: 500px;
                 order: 1;
                 margin: 24px 0;
                 grid-area: imagem;
-                object-fit: cover;
                 align-self: center;
             }
         }
