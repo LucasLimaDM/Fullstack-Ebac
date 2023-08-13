@@ -1,1 +1,0 @@
-function ಠ_ಠ320(ಠ_ಠ321,ಠ_ಠ322){return ಠ_ಠ321+ಠ_ಠ322}console.log("Compre batom");
