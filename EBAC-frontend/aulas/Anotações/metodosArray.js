@@ -110,7 +110,22 @@ if(
     document.querySelector(li).className = '' 
 }
 
+//* Map e Set - Objetos e Arrays diferenciados
 
+/*
+
+    --- Map - funcionamento [chave => valor], mas mantendo ordem de elementos como array
+
+*/
+
+const ageMap = new Map([
+  ['Jack', 20],
+  ['Alan', 34],
+  ['Bill', 10],
+  ['Sam', 9]
+]);
+
+ageMap.size // 4; igual ao .length de arrays
 
 
 

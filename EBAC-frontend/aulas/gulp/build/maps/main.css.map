@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.scss","variaveis.scss"],"names":[],"mappings":"AAEA,KACI,iBCHW,IDKX,aACI,mBAGR,EACI,SACA","file":"../main.css","sourcesContent":["@use 'variaveis';\n\nbody{\n    background-color: variaveis.$corPrincipal;\n\n    &::before{\n        content: 'Aboboraa';\n    }\n}\n*{\n    margin: 0;\n    padding: 0;\n}","$corPrincipal: red;"]}
