@@ -1,0 +1,10 @@
+git reset - tira todos os arquivos do stage
+git reset [nome do arquivo] - retira o arqivo do stage
+git reset [num do commit anterior] - retorna a branch ao commit anterior
+git status - visualizar arquivos no git
+git branch [nome de uma nova branch] - cria uma branch
+git checkout -b [nome da nova branch] - cria nova branch e vai até ela
+git add . - adiciona todas as mudanças ao stage
+git commit -m "[descrição do commit]" - cria novo commit
+git push - faz o push
+git pull - faz o pull
