@@ -8,3 +8,4 @@ git add . - adiciona todas as mudanças ao stage
 git commit -m "[descrição do commit]" - cria novo commit
 git push - faz o push
 git pull - faz o pull
+git log - permite ver o histórico de commits no tempo
