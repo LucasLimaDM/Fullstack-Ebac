@@ -9,3 +9,5 @@ git commit -m "[descrição do commit]" - cria novo commit
 git push - faz o push
 git pull - faz o pull
 git log - permite ver o histórico de commits no tempo
+git rebase -i HEAD~[num de commits] - abre a edição do rebase para fazer o squash, juntar os commits
+git cherry pick - puxa um único commit para o projeto
