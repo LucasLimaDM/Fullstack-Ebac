@@ -1,3 +1,6 @@
+/**
+ * @author lucas dias
+ */
 public class Casa {
 
     private String dono;
