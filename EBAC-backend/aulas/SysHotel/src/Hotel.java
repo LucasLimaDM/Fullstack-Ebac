@@ -11,15 +11,13 @@ public class Hotel {
     private int moradoresSegundoQuarto;
 
 
-
-
     /**
      * Método para validar se todos os quartos já estão ocupados
      *
      * @return boolean Se a casa estiver com os dois quartos ocupados, retorna true
      */
 
-    public boolean casaCheia(){
+    public boolean casaCheia() {
 
         return (moradoresPrimeiroQuarto > 0) && (moradoresSegundoQuarto > 0);
 
@@ -30,25 +28,13 @@ public class Hotel {
      *
      * @return boolean Se o quarto um ou dois estiverem com mais de duas pessoas, retorna true
      */
-    public boolean dividindoQuarto(){
+    public boolean dividindoQuarto() {
         return (moradoresPrimeiroQuarto > 2 || moradoresSegundoQuarto > 2);
     }
 
-    public int getNumMoradores(){
+    public int getNumMoradores() {
         return moradoresPrimeiroQuarto + moradoresSegundoQuarto;
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     public String getDono() {
@@ -74,6 +60,7 @@ public class Hotel {
     public void setMoradoresSegundoQuarto(int moradoresSegundoQuarto) {
         this.moradoresSegundoQuarto = moradoresSegundoQuarto;
     }
+}
 
 
 
