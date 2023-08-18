@@ -1,5 +1,3 @@
-package br.com.lucasdias;
-
 public class Participante implements Comparable<Participante>{
 
     private String nome;

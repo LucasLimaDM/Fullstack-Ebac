@@ -1,4 +1,3 @@
-package br.com.lucasdias;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
