@@ -1,0 +1,11 @@
+                                        HashSet - rápido e não ordenado
+Set - elementos não podem se repetir <
+                                        TreeSet - rápido em ordem natural
+
+                                    ArrayList - rápido para consultas, lento para muitas adições
+List - elementos podem se repetir <
+                                    LinkedList - rápido para adições e remoções, lento para consultas
+
+Deque - ArrayDeque - Array com mais funções como getFirst e getLast
+
+Queue - PriorityQueue - Fila de prioridades que podem ser definidas
