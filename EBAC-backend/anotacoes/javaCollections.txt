@@ -1,5 +1,5 @@
                                         HashSet - rápido e não ordenado
-Set - elementos não podem se repetir <
+Set - elementos não podem se repetir <-- LinkedHashSet - ordem em que os itens foram adicionados
                                         TreeSet - rápido em ordem natural
 
                                     ArrayList - rápido para consultas, lento para muitas adições
@@ -9,3 +9,7 @@ List - elementos podem se repetir <
 Deque - ArrayDeque - Array com mais funções como getFirst e getLast
 
 Queue - PriorityQueue - Fila de prioridades que podem ser definidas
+
+                                            HashMap - desordenado, consulta pela chave
+Map - conjunto chave:valor como objeto <    LinkedHashMap - ordenado pela ordem que foram adicionados
+                                            TreeMap - ordenação natural pela chave
