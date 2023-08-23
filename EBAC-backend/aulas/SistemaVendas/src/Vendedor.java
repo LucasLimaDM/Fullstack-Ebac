@@ -13,7 +13,9 @@ public class Vendedor {
     private Double comissao;
 
 
+    public static void setVendedor(){
 
+    }
 
     public Long getIdVendedor() {
         return idVendedor;

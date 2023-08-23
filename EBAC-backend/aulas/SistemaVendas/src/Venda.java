@@ -18,12 +18,11 @@ public class Venda {
         produtos.add(produto);
     }
 
-    public void concretizarVenda(){
-
-    }
-
-    public void cancelarVenda(){
-        
+    public static void criaVenda(){
+        if(Registro.vendedorAtual == null){
+            Vendedor.setVendedor();
+        }
+        new Venda(Registro.criaId() ,Registro.vendedorAtual);
     }
 
 

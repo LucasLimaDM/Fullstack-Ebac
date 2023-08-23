@@ -31,6 +31,8 @@ public class Main {
         System.out.println("Entre com o nome do caixa que irá operar o terminal: ");
         String nomeVendedorAtual = sc.nextLine();
 
+        if()
+
         for (Vendedor vendedor : Registro.vendedores){
             if(vendedor.getNome().equalsIgnoreCase(nomeVendedorAtual)){
                 Registro.vendedorAtual = vendedor;
@@ -44,7 +46,7 @@ public class Main {
 
 
 
-        Registro.vendaAtual = new Venda(criaId(), Registro.vendedorAtual);
+        Registro.vendaAtual = new Venda(Registro.criaId(), Registro.vendedorAtual);
 
 
         System.out.println("Caixa disponível para adição de produtos");
@@ -84,7 +86,7 @@ public class Main {
         Double precoProduto = sc.nextDouble();
 
         System.out.println("Gerando id do Vendedor...");
-        Long idProduto = criaId();
+        Long idProduto = Registro.criaId();
 
         Registro.produtos.add(new Produto(idProduto, nomeProduto, precoProduto));
         System.out.println("Produto adicionado ao registro! Vamos te redirecionar para a página de vendas de volta");
@@ -107,7 +109,7 @@ public class Main {
         Double comissaoVendedor = sc.nextDouble();
 
         System.out.println("Gerando id do Vendedor...");
-        Long idVendedor = criaId();
+        Long idVendedor = Registro.criaId();
 
         Registro.vendedores.add(new Vendedor(idVendedor, nomeVendedor, comissaoVendedor));
         System.out.println("Vendedor adicionado ao registro! Vamos te redirecionar para a página de vendas de volta");
@@ -115,16 +117,7 @@ public class Main {
 
     }
 
-    public void entraProduto(){
-        Scanner sc = new Scanner(System.in);
-        sc.nextLine();
 
 
-    }
-
-    public static Long criaId(){
-        Random rd = new Random();
-        return Math.round((rd.nextDouble()*100000000) / 100);
-    }
 
 }

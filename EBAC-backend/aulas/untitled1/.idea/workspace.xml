@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="20a1ec32-bec6-4259-87af-f5fb7381b36d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../SistemaVendasInterface/src/dao/IProdutoDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SistemaVendasInterface/src/dao/IVendaDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SistemaVendasInterface/src/dao/IVendedorDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SistemaVendasInterface/src/dao/ProdutoMapDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SistemaVendasInterface/src/dao/VendaMapDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SistemaVendasInterface/src/dao/VendedorMapDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SistemaVendasInterface/src/domain/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SistemaVendasInterface/src/domain/Produto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SistemaVendasInterface/src/domain/Venda.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SistemaVendasInterface/src/domain/Vendedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SistemaVendas/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SistemaVendas/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SistemaVendas/src/Registro.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SistemaVendas/src/Registro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SistemaVendas/src/Venda.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SistemaVendas/src/Venda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SistemaVendas/src/Vendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SistemaVendas/src/Vendedor.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2UNVrS3voAComPujh4LXVDvn9Cq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/lucas/Documentos/Github/Fullstack-Java/EBAC-backend/aulas/SIstemaCliente"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="20a1ec32-bec6-4259-87af-f5fb7381b36d" name="Changes" comment="" />
+      <created>1692780230432</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1692780230432</updated>
+    </task>
+    <servers />
+  </component>
+</project>
