@@ -1,1 +1,1 @@
-function ಠ_ಠ320(ಠ_ಠ321,ಠ_ಠ322){return ಠ_ಠ321+ಠ_ಠ322}console.log("Compre batom");
+function ಠ_ಠ169(ಠ_ಠ170,ಠ_ಠ171){return ಠ_ಠ170+ಠ_ಠ171}console.log("Compre batom");

@@ -50,7 +50,7 @@ public class App {
                 validaSaida(resultado);
             }
 
-            
+
 
         }
 
