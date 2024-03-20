@@ -7,6 +7,9 @@
     <meta name="description" content="Carros a venda baratos e  bonitos, lindos, a preços acessíveis.">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
     <title>jQuery Motors</title> 
 </head>
 <body>
@@ -27,17 +30,27 @@
         </div>
     </header>
     <nav id="sidebar">
-
     </nav>
+    <div id="front-carousel">
+        <img src="images/coelho.jpg" alt="coelho">
+        <img src="images/mamaco.jpg" alt="mamaco">
+        <img src="images/patinho.jpg" alt="patinho">
+        <img src="images/coelho.jpg" alt="coelho">
+        <img src="images/mamaco.jpg" alt="mamaco">
+        <img src="images/patinho.jpg" alt="patinho">
+    </div>
     <form>
-        <input type="text" autocapitalize="true">
-        <input type="tel" maxlength="15" name="telefone" id="telefone">
+        <input type="text" autocapitalize="true" id="input-name" name="name">
+        <input type="tel" maxlength="15" name="telefone" id="input-telefone">
+        <input type="email" name="email" id="input-email">
+        <input type="text" name="address" id="input-address">
+        <input type="number" name="cep" id="input-cep">
         <button>Botão</button>
     </form>
 
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="script.js"></script>
 <script src="jquery.mask.min.js"></script>
-
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
 </html>

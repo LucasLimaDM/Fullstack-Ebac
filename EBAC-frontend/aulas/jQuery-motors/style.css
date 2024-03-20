@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Montserrat;
-   outline: 1px solid lime;
+    outline: 0px solid lime;
 }
 .flex{
     display: flex;
@@ -141,6 +141,11 @@ header #links button{
 }
 #menu-hamburguer.X span:nth-child(3){
     transform: rotate(-45deg);
+}
+
+#front-carousel img{
+    height: 600px;
+    object-fit: cover;
 }
 
 /** media queries para quebrar o header */
