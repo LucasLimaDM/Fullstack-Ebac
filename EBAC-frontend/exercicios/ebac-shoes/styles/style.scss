@@ -1,0 +1,200 @@
+//* SASS Config
+
+// Colors
+
+$distac-color1: #3967d5;
+$condistac-color1: #fbfbfb;
+$background-color1: #eee;
+
+// Mixins
+
+@mixin flexElement(
+    $flex-flow: column nowrap,
+    $justify-content: space-around,
+    $align-items: center,
+    $gap: 0
+){
+    display: flex;
+    flex-flow:$flex-flow;
+    justify-content:$justify-content;
+    align-items:$align-items;
+    gap:$gap;
+}
+
+// Extends
+%insideTitle{
+    font-style: italic;
+    color: $distac-color1;
+    border-bottom: 2px solid $distac-color1;
+    padding-bottom: 12px;
+    margin-bottom: 32px;
+}
+%distacElement{
+    background-color: $distac-color1;
+    color: $condistac-color1;
+}
+
+//* Style configurations
+
+// Reset
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    // outline: 1px solid lime;
+}
+button{
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 1em;
+}
+
+// General configurations
+
+.container{
+    max-width: 1024px;
+    margin:auto;
+}
+body{
+    background-color: $background-color1;
+}
+
+// Specific configurations
+
+header{
+    @extend %distacElement;
+    height: 76px;
+    margin-bottom: 38px;
+
+    .container{
+        @include flexElement(row nowrap, space-between);
+        height: 100%;
+
+        h1{
+            font-style: italic;
+        }
+
+        nav{
+            @include flexElement(row wrap, space-between, center, 1px );
+
+            button{
+                width: 6em;
+                height: 2em;
+                color: $condistac-color1;
+                font-size: 1.05em;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+
+main{
+    @include flexElement(column nowrap, $gap:80px);
+
+    #sobre-loja{
+        display: grid;
+        grid-template-columns: 40% 60%;
+        
+        .box-text{
+            h2{
+                @extend %insideTitle;
+            }
+        }
+    }
+
+    #produtos{
+        width: 100%;
+        margin-bottom: 100px;
+
+        h2{
+            @extend %insideTitle;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(4, 23%);
+            gap: 2.66%;
+
+            article{
+                @include flexElement(column, flex-start, flex-start, 10px);
+                position: relative;
+                height:400px;
+                
+
+                figure {
+                    height: 220px;
+                    width: 100%;
+                    background-color: #fff;
+                    @include flexElement(row, center, center);
+                    img{
+                        width: 220px;
+                    }
+                }
+
+                h3{
+                    font-size:1.32em;
+                }
+                p{
+                    font-size: 0.88em
+                }
+                button{
+                    @extend %distacElement;
+                    height: 32px;
+                    width: 100%;
+                    margin: 0 auto;
+                    border-radius: 5px;
+                    position: relative;
+                    bottom: 0;
+                    font-weight: bold;
+                }
+                
+            }
+        }
+    }
+}
+
+@media(max-width:1024px){
+    .container{
+        width: 80vw;
+    }
+
+    main{
+
+        #sobre-loja{
+
+            @include flexElement(column nowrap, flex-start, center, 20px);
+            
+            img{
+                width: 100%;
+            }
+        }
+
+        #produtos {
+            width: 80vw;
+
+            .container{
+                grid-template-columns: 45% 45%;
+                gap: 10%;
+
+                article{
+                    height: 370px;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:640px){
+    main{
+        #produtos .container{
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 30px;
+        }
+    }
+}
