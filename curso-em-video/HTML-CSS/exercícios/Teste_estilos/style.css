@@ -1,0 +1,33 @@
+body{
+    background-image: linear-gradient(to right, #745AE8 60%, #BB3FF2);
+}
+main{
+    background-color: white;
+    margin: auto;
+    width: 600px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 10px 10px 20px #2b2155;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+p{
+    text-align: center;     
+}
+button{
+    margin: 15px 0px 20px 90px;
+    display: block;
+    border: 2px solid black;
+    border-radius: 50px;
+    height: 40px;
+    width: 130px;
+    background-image: linear-gradient(to right, #745AE8, #BB3FF2 );
+    color: white;
+    font-weight: bold;
+    box-shadow: 3px 3px 4px #bc3ff2b7;
+}
+

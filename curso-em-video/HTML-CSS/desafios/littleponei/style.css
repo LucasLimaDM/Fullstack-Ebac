@@ -1,0 +1,57 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    transition: background-color 0.5s;
+}
+body{
+    background-color: #131315;
+    text-align: center;
+}
+h1{
+    color: whitesmoke;
+    margin-top: 30vh;
+}
+ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+ 
+}
+li div{
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 20px;
+    border: 2px solid #808080;
+    
+}
+
+#inst:hover{
+    background-color: #dd2a7b;
+}
+#wpp:hover{
+    background-color: #0f980d;
+}
+#mail:hover{
+    background-color: rgb(215, 25, 25);
+}
+#tt:hover{
+    background-color: rgb(14, 128, 163);
+}
+#fb:hover{
+    background-color: blue;
+}
+#reta{
+    
+  
+    height: 5px;
+    width: 75px;
+    background-color: rgb(107, 7, 112);
+  
+}
